@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Hotline</title>
+    <title>Emergency Service Hotline</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </script>
+    <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>git</h1>
+<body class="bg-gray-100">
+<nav class="navbar bg-base-200 px-6 flex justify-between">
+    <!-- Left: Logo + Title -->
+    <div class="flex items-center gap-2">
+      <img src="assets/logo.png" alt="Logo" class="w-8 h-8">
+      <span class="text-lg font-bold text-green-700">Emergency Service</span>
+    </div>
+
+    <!-- Right: Heart, Coins, Copy -->
+    <div class="flex gap-6 items-center">
+      <!-- Heart (using picture) -->
+      <div class="flex items-center gap-1">
+        <span id="heartCount">0</span>
+        <img src="assets/heart.png" alt="Heart" class="w-5 h-5"> 
+      </div>
+      <!-- Coin -->
+      <div class="flex items-center gap-1 text-yellow-600 font-semibold">
+        <span id="coinCount">100</span>
+        <img src="assets/coin.png" alt="Coin" class="w-5 h-5">
+    </div>
+      <!-- Copy -->
+      <div>
+      <span id="copyBadge" class="px-3 py-1 rounded-lg bg-green-500 text-white text-sm font-semibold inline-block">0 Copy</span>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+    <script src="index.js"></script>
 </body>
 </html>
