@@ -7,7 +7,7 @@ let heartCount = 0;
     const coinCounter = document.getElementById("coinCount");
     const historyList = document.getElementById("historyList");
 
-    // Heart Button (on each card)
+
     document.querySelectorAll(".heartBtn").forEach(btn => {
       btn.addEventListener("click", () => {
         heartCount++;
@@ -15,7 +15,7 @@ let heartCount = 0;
       });
     });
 
-    // Copy Button
+
     document.querySelectorAll(".copyBtn").forEach(btn => {
       btn.addEventListener("click", () => {
         const number = btn.getAttribute("data-number");
@@ -26,7 +26,7 @@ let heartCount = 0;
       });
     });
 
-    // Call Button
+
     document.querySelectorAll(".callBtn").forEach(btn => {
       btn.addEventListener("click", () => {
         const name = btn.getAttribute("data-name");
@@ -43,8 +43,6 @@ let heartCount = 0;
 
         const li = document.createElement("li");
     li.classList.add("flex", "justify-between", "items-start","pb-1");
-
-    // Left div for name & number
     const leftDiv = document.createElement("div");
     leftDiv.classList.add("flex", "flex-col");
 
@@ -59,18 +57,17 @@ let heartCount = 0;
     leftDiv.appendChild(nameLine);
     leftDiv.appendChild(numberLine);
 
-    // Right div for time
     const rightSpan = document.createElement("span");
     rightSpan.textContent = new Date().toLocaleTimeString();
     rightSpan.classList.add("text-gray-500", "text-sm");
 
     li.appendChild(leftDiv);
     li.appendChild(rightSpan);
-        historyList.appendChild(li);
+    historyList.appendChild(li);
       });
     });
 
-    // Clear History
+  
     document.getElementById("clearHistory").addEventListener("click", () => {
       historyList.innerHTML = "";
     });
