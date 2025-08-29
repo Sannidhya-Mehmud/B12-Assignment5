@@ -42,9 +42,31 @@ let heartCount = 0;
         coinCounter.textContent = coinCount;
 
         const li = document.createElement("li");
-        const time = new Date().toLocaleTimeString();
-        li.textContent = `${name} — ${number} — ${time}`;
-        historyList.prepend(li);
+    li.classList.add("flex", "justify-between", "items-start","pb-1");
+
+    // Left div for name & number
+    const leftDiv = document.createElement("div");
+    leftDiv.classList.add("flex", "flex-col");
+
+    const nameLine = document.createElement("span");
+    nameLine.textContent = name;
+    nameLine.classList.add("font-semibold");
+
+    const numberLine = document.createElement("span");
+    numberLine.textContent = number;
+    numberLine.classList.add("text-gray-600", "text-sm");
+
+    leftDiv.appendChild(nameLine);
+    leftDiv.appendChild(numberLine);
+
+    // Right div for time
+    const rightSpan = document.createElement("span");
+    rightSpan.textContent = new Date().toLocaleTimeString();
+    rightSpan.classList.add("text-gray-500", "text-sm");
+
+    li.appendChild(leftDiv);
+    li.appendChild(rightSpan);
+        historyList.appendChild(li);
       });
     });
 
