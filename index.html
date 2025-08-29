@@ -6,7 +6,7 @@
     <title>Emergency Service Hotline</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </script>
-    <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-100">
  <nav class="bg-white shadow px-6 top-0 flex justify-between items-center h-16">
@@ -24,7 +24,7 @@
          <img src="assets/coin.png" alt="Coin" class="w-5 h-5" />
       </div>
       <div>
-        <span id="copyBadge" class="px-3 py-1 rounded-lg bg-green-500 text-white text-sm font-semibold inline-block">0 Copy</span>
+        <span id="copyCount" class="px-3 py-1 rounded-lg bg-green-500 text-white text-sm font-semibold inline-block">0 Copy</span>
       </div>
     </div>
   </nav>
@@ -41,21 +41,105 @@
 
       <!-- CARD TEMPLATE -->
       <article class="bg-white shadow p-4 relative rounded-lg">
-        <button class="absolute top-3 left-3 text-red-500 hover:scale-110 transition heartBtn" title="Like">
-          <i class="fa-regular fa-heart text-xl"></i>
+        <button class="absolute top-3 right-3 text-red-500 hover:scale-110 transition heartBtn" title="Like"><i class="fa-solid fa-heart"></i>
         </button>
         <div class="flex items-center gap-2 mb-1">
-          <img src="/icons/police.png" alt="icon" class="w-6 h-6" />
-          <h2 class="font-semibold">National Emergency (All)</h2>
+          <img src="assets/emergency.png" alt="icon" class="w-6 h-6" />
+          <h2 class="font-semibold">National Emergency Number</h2>
         </div>
-        <p class="text-sm text-gray-500">English: National Emergency</p>
+        <p class="text-sm text-gray-500">National Emergency</p>
         <p class="font-bold mt-1 text-lg">999</p>
         <div class="mt-2">
           <span class="px-2 py-1 border border-gray-400 rounded-full text-xs">All</span>
         </div>
         <div class="flex justify-between mt-4">
-          <button class="px-2 py-1 border border-gray-400 rounded text-sm copyBtn" data-number="999">📋 Copy</button>
-          <button class="px-2 py-1 bg-green-500 text-white rounded text-sm callBtn" data-name="National Emergency" data-number="999">📞 Call</button>
+          <button class="px-2 py-1 border border-gray-400 rounded text-sm copyBtn" data-number="999"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="px-2 py-1 bg-green-500 text-white rounded text-sm callBtn" data-name="National Emergency" data-number="999"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </article>
+      <article class="bg-white shadow p-4 relative rounded-lg">
+        <button class="absolute top-3 right-3 text-red-500 hover:scale-110 transition heartBtn" title="Like"><i class="fa-solid fa-heart"></i>
+        </button>
+        <div class="flex items-center gap-2 mb-1">
+          <img src="assets/police.png" alt="icon" class="w-6 h-6" />
+          <h2 class="font-semibold">Police Helpline Number</h2>
+        </div>
+        <p class="text-sm text-gray-500">Police</p>
+        <p class="font-bold mt-1 text-lg">999</p>
+        <div class="mt-2">
+          <span class="px-2 py-1 border border-gray-400 rounded-full text-xs">Police</span>
+        </div>
+        <div class="flex justify-between mt-4">
+          <button class="px-2 py-1 border border-gray-400 rounded text-sm copyBtn" data-number="999"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="px-2 py-1 bg-green-500 text-white rounded text-sm callBtn" data-name="National Emergency" data-number="999"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </article>
+      <article class="bg-white shadow p-4 relative rounded-lg">
+        <button class="absolute top-3 right-3 text-red-500 hover:scale-110 transition heartBtn" title="Like"><i class="fa-solid fa-heart"></i>
+        </button>
+        <div class="flex items-center gap-2 mb-1">
+          <img src="assets/fire-service.png" alt="icon" class="w-6 h-6" />
+          <h2 class="font-semibold">Fire Service Number</h2>
+        </div>
+        <p class="text-sm text-gray-500">Fire Service</p>
+        <p class="font-bold mt-1 text-lg">999</p>
+        <div class="mt-2">
+          <span class="px-2 py-1 border border-gray-400 rounded-full text-xs">Fire</span>
+        </div>
+        <div class="flex justify-between mt-4">
+          <button class="px-2 py-1 border border-gray-400 rounded text-sm copyBtn" data-number="999"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="px-2 py-1 bg-green-500 text-white rounded text-sm callBtn" data-name="National Emergency" data-number="999"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </article>
+      <article class="bg-white shadow p-4 relative rounded-lg">
+        <button class="absolute top-3 right-3 text-red-500 hover:scale-110 transition heartBtn" title="Like"><i class="fa-solid fa-heart"></i>
+        </button>
+        <div class="flex items-center gap-2 mb-1">
+          <img src="assets/ambulance.png" alt="icon" class="w-6 h-6" />
+          <h2 class="font-semibold">Ambulance Service</h2>
+        </div>
+        <p class="text-sm text-gray-500">Ambulance</p>
+        <p class="font-bold mt-1 text-lg">199-3333</p>
+        <div class="mt-2">
+          <span class="px-2 py-1 border border-gray-400 rounded-full text-xs">Health</span>
+        </div>
+        <div class="flex justify-between mt-4">
+          <button class="px-2 py-1 border border-gray-400 rounded text-sm copyBtn" data-number="999"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="px-2 py-1 bg-green-500 text-white rounded text-sm callBtn" data-name="National Emergency" data-number="999"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </article>
+      <article class="bg-white shadow p-4 relative rounded-lg">
+        <button class="absolute top-3 right-3 text-red-500 hover:scale-110 transition heartBtn" title="Like"><i class="fa-solid fa-heart"></i>
+        </button>
+        <div class="flex items-center gap-2 mb-1">
+          <img src="assets/emergency.png" alt="icon" class="w-6 h-6" />
+          <h2 class="font-semibold">Women & Child Helpline</h2>
+        </div>
+        <p class="text-sm text-gray-500">Women & Child Helpline</p>
+        <p class="font-bold mt-1 text-lg">109</p>
+        <div class="mt-2">
+          <span class="px-2 py-1 border border-gray-400 rounded-full text-xs">Help</span>
+        </div>
+        <div class="flex justify-between mt-4">
+          <button class="px-2 py-1 border border-gray-400 rounded text-sm copyBtn" data-number="999"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="px-2 py-1 bg-green-500 text-white rounded text-sm callBtn" data-name="National Emergency" data-number="999"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </article>
+      <article class="bg-white shadow p-4 relative rounded-lg">
+        <button class="absolute top-3 right-3 text-red-500 hover:scale-110 transition heartBtn" title="Like"><i class="fa-solid fa-heart"></i>
+        </button>
+        <div class="flex items-center gap-2 mb-1">
+          <img src="assets/emergency.png" alt="icon" class="w-6 h-6" />
+          <h2 class="font-semibold">Anti-Corruption Helpline</h2>
+        </div>
+        <p class="text-sm text-gray-500">Anti-Corruption</p>
+        <p class="font-bold mt-1 text-lg">106</p>
+        <div class="mt-2">
+          <span class="px-2 py-1 border border-gray-400 rounded-full text-xs">Govt</span>
+        </div>
+        <div class="flex justify-between mt-4">
+          <button class="px-2 py-1 border border-gray-400 rounded text-sm copyBtn" data-number="999"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="px-2 py-1 bg-green-500 text-white rounded text-sm callBtn" data-name="National Emergency" data-number="999"><i class="fa-solid fa-phone"></i>Call</button>
         </div>
       </article>
 

@@ -21,7 +21,7 @@ let heartCount = 0;
         const number = btn.getAttribute("data-number");
         navigator.clipboard.writeText(number);
         copyCount++;
-        copyCounter.textContent = copyCount;
+        copyCounter.textContent = copyCount + " Copy";
         alert("Number copied: " + number);
       });
     });
